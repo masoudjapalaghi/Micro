@@ -4,6 +4,7 @@
   "workspaces": [
     "./app1",
     "./app2",
+    "./app3",
     "./shared-library"
   ],
   "version": "0.0.0",

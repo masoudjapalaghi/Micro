@@ -10,7 +10,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, "dist"),
     },
-    port: 3002,
+    port: 3003,
   },
   output: {
     publicPath: "auto",
@@ -29,10 +29,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "app2",
+      name: "app3",
       filename: "remoteEntry.js",
       exposes: {
-        "./ShowData": "./src/ShowData",
+        "./SearchBar": "./src/SearchBar",
       },
       shared: [
         "react",
@@ -40,7 +40,8 @@ module.exports = {
         {
           "shared-context_shared-library": {
             import: "shared-context_shared-library",
-            requiredVersion: require("../shared-library/package.json").version,
+            requiredVersion:
+              require("shared-context_shared-library/package.json").version,
           },
         },
       ],

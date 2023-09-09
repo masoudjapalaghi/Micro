@@ -1,6 +1,6 @@
 import { NameContextProvider } from 'shared-context_shared-library';
 import React from 'react';
-import Welcome from './Welcome';
+import Welcome from './ShowData';
 
 const App = () => (
   <div>
